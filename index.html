@@ -14,6 +14,34 @@
      body > p{ padding:0 20%;color:#1a0000;font-size:2em;font-family:'Architects Daughter' 
         }
         </style>
+                <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            $(function () {
+                
+                'use strict';
+                
+                $('.navbar ul.navbar-nav li.search a').on('click', function () {
+                    $(this).siblings('form').fadeToggle();
+                });
+                
+                $('.navbar ul.navbar-nav li a, footer ul.main-list li a').on('click', function (e) {
+                    
+                    var getAttr = $(this).attr('href');
+                    
+                    e.preventDefault();
+                    $('html').animate({scrollTop: $(getAttr).offset().top}, 1000);
+                });
+            });
+        </script>
+    <script>
+function myFunction() {
+  window.open("cprofile.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
+}
+</script>
+var icon= document.getElementById('file');
+    icon.addEventListener("click",myFunction);
+    </script>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light text-uppercase font-weight-bold">
@@ -75,7 +103,7 @@
                 <p>Authorized distributors of Chicago Pneumatic.</p>
                 <div class="row">
                     <div class="col-lg-7 col-12 d-flex align-items-center">
-                        <p>Formerly trading as Thabazimbi Air Compressors :Air-Gen Group are an authorised distributor of Chicago Pneumatics in Anderbolt Boksburg,
+                        <p>Trading as Thabazimbi Air Compressors :Air-Gen Group are an authorised distributor of Chicago Pneumatics in Anderbolt Boksburg,
                             We offer Cost effective , Customer-centric compressed air services, blower repairs and services ,as well as Gen-sets services and Overhauls.
                         We offer a range of services, including air compressors , air-treatment ,air-dryers (refrigerant and adsorption chemical-type ) and In-line filtration 
                         solutions in order to meet our customer's air quality reqirements .
@@ -157,7 +185,7 @@
         <div class="prices">
             <div class="container">
                 <div id="company"></div>
-                <h2 class="text-center text-uppercase">More  <span>Services</span></h2>
+                <h2 class="text-center text-uppercase">Standard<span>Practises</span></h2>
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="item f-item">
@@ -199,7 +227,7 @@
                         <div class="item l-item">
                             <div>
                                 <h5>Consumables</h5>
-                                <p>Non-essential /Essential items </p>
+                                <p>Engineering Supplies </p>
                             </div>
                             <div>
                                 <p><span style="font-size:1.5em">OEM </span> <span style="font-size:1.5em"> Parts</span></p>
@@ -270,33 +298,6 @@
             </div>
         </footer>
         
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script>
-            $(function () {
-                
-                'use strict';
-                
-                $('.navbar ul.navbar-nav li.search a').on('click', function () {
-                    $(this).siblings('form').fadeToggle();
-                });
-                
-                $('.navbar ul.navbar-nav li a, footer ul.main-list li a').on('click', function (e) {
-                    
-                    var getAttr = $(this).attr('href');
-                    
-                    e.preventDefault();
-                    $('html').animate({scrollTop: $(getAttr).offset().top}, 1000);
-                });
-            });
-        </script>
-    <script>
-function myFunction() {
-  window.open("cprofile.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
-}
-</script>
-var icon= document.getElementById('file');
-    icon.addEventListener("click",myFunction);
-    </script>
+
     </body>
 </html>
